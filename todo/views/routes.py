@@ -20,7 +20,7 @@ def get_todos():
 	}])
 
 
-@api.route("/todos/<int:id>", method=["GET"])
+@api.route("/todos/<int:id>", methods=["GET"])
 def get_todo(id):
 	return jsonify({
 		"id": id,
@@ -32,7 +32,7 @@ def get_todo(id):
 		"updated_at": "2023-02-20T00:00:00"
 	})
 
-@api.route("/todos", method=["POST"])
+@api.route("/todos", methods=["POST"])
 def create_todo():
 	return jsonify({
 		"id": 1,
@@ -44,7 +44,7 @@ def create_todo():
 		"updated_at": "2023-02-20T00:00:00"
 	}, 201)
 
-@api.route("/todos/<int:id>", method=["PUT"])
+@api.route("/todos/<int:id>", methods=["PUT"])
 def update_todo(id):
 	return jsonify({
 		"id": id,
